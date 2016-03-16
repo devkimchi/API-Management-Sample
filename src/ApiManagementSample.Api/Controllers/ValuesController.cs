@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Net;
 
+using ApiManagementSample.Api.Filters;
 using ApiManagementSample.Api.Responses;
 
 using Microsoft.AspNet.Mvc;
@@ -15,6 +16,7 @@ namespace ApiManagementSample.Api.Controllers
         // GET: api/values
         [HttpGet]
         [Route("", Name = "GetValues")]
+        [ApiAuthorizationFilter]
         [Produces(typeof(ValueResponseCollection))]
         [SwaggerResponse(HttpStatusCode.OK, Type = typeof(ValueResponseCollection))]
         public IActionResult Get()

@@ -3,6 +3,7 @@
     <CollectionProperty Name="RecognizedWords">
       <Value>organisation</Value>
       <Value>git</Value>
+      <Value>authorisation</Value>
     </CollectionProperty>
   </GlobalSettings>
   <Analyzers>

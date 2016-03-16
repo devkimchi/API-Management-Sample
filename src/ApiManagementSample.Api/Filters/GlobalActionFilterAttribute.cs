@@ -7,9 +7,9 @@ using Microsoft.AspNet.Mvc.Filters;
 namespace ApiManagementSample.Api.Filters
 {
     /// <summary>
-    /// This represents the filter entity for global actions.
+    /// This represents the filter attribute entity for global actions.
     /// </summary>
-    public class GlobalActionFilter : ActionFilterAttribute
+    public class GlobalActionFilterAttribute : ActionFilterAttribute
     {
         /// <summary>
         /// Called while an action is being executed.
@@ -19,12 +19,10 @@ namespace ApiManagementSample.Api.Filters
         {
             base.OnActionExecuting(context);
 
-            if (context.HttpContext.Request.IsHttps)
+            if (!context.HttpContext.Request.IsHttps)
             {
-                return;
+                throw new HttpResponseException(HttpStatusCode.BadRequest, "HTTPS Connection Required");
             }
-
-            throw new HttpResponseException(HttpStatusCode.BadRequest, "HTTPS Connection Required");
         }
     }
 }

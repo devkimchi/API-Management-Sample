@@ -94,7 +94,7 @@ namespace ApiManagementSample.Api
             services.AddMvc().AddMvcOptions(
                 options =>
                     {
-                        options.Filters.Add(new GlobalActionFilter());
+                        options.Filters.Add(new GlobalActionFilterAttribute());
                         options.Filters.Add(new GlobalExceptionFilter());
                     }).AddJsonOptions(
                         options =>
