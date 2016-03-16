@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Net;
-using System.Threading.Tasks;
 
 using ApiManagementSample.Api.Responses;
 
@@ -24,10 +21,21 @@ namespace ApiManagementSample.Api.Controllers
         {
             var results = new ValueResponseCollection()
                               {
-                                  Items = new List<ValueResponse>()
+                                  Items =
+                                      new List<ValueResponse>()
                                           {
-                                              new ValueResponse() { Value = "value1" },
-                                              new ValueResponse() { Value = "value2" },
+                                              new ValueResponse()
+                                                  {
+                                                      Value
+                                                          =
+                                                          "value1"
+                                                  },
+                                              new ValueResponse()
+                                                  {
+                                                      Value
+                                                          =
+                                                          "value2"
+                                                  },
                                           }
                               };
             return this.Ok(results);
