@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5553B876-AC72-470B-BAE1-5F5E3B19F3A0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6D2C5992-3971-4949-A121-20D743F42627}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		ApiManagmentSample.sln.DotSettings = ApiManagmentSample.sln.DotSettings
+		global.json = global.json
+		LICENSE = LICENSE
+		README.md = README.md
+		Settings.StyleCop = Settings.StyleCop
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ApiManagementSample.Api", "src\ApiManagementSample.Api\ApiManagementSample.Api.xproj", "{338391DB-B7CA-436A-A31E-4A51A9C84B20}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{338391DB-B7CA-436A-A31E-4A51A9C84B20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{338391DB-B7CA-436A-A31E-4A51A9C84B20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{338391DB-B7CA-436A-A31E-4A51A9C84B20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{338391DB-B7CA-436A-A31E-4A51A9C84B20}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{338391DB-B7CA-436A-A31E-4A51A9C84B20} = {5553B876-AC72-470B-BAE1-5F5E3B19F3A0}
+	EndGlobalSection
+EndGlobal
