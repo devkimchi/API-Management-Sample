@@ -5,6 +5,7 @@ using ApiManagementSample.Api.Filters;
 
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Hosting;
+using Microsoft.AspNet.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -96,6 +97,7 @@ namespace ApiManagementSample.Api
                     {
                         options.Filters.Add(new GlobalActionFilterAttribute());
                         options.Filters.Add(new GlobalExceptionFilter());
+                        options.Filters.Add(new RequireHttpsAttribute());
                     }).AddJsonOptions(
                         options =>
                             {
@@ -115,7 +117,7 @@ namespace ApiManagementSample.Api
                             new Info()
                                 {
                                     Version = "v1",
-                                    Title = "Telstra Team Site API for Site Collection Provisioning"
+                                    Title = "API Management Sample API"
                                 });
                         options.IgnoreObsoleteActions = true;
                         options.OperationFilter(new ApplyXmlActionComments(GetXmlPath(this.ApplicationEnvironment)));

@@ -19,10 +19,10 @@ namespace ApiManagementSample.Api.Filters
         {
             base.OnActionExecuting(context);
 
-            if (!context.HttpContext.Request.IsHttps)
-            {
-                throw new HttpResponseException(HttpStatusCode.BadRequest, "HTTPS Connection Required");
-            }
+            //if (!context.HttpContext.Request.IsHttps)
+            //{
+            //    throw new HttpResponseException(HttpStatusCode.BadRequest, "HTTPS Connection Required");
+            //}
         }
     }
 }
