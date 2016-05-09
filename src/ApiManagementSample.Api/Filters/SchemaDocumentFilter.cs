@@ -18,7 +18,7 @@ namespace ApiManagementSample.Api.Filters
         {
             swaggerDoc.Host = "localhost:44304";
 #if !DEBUG
-            swaggerDoc.Host = "api-demo-emocon2016ss.azurewebsites.net";
+            swaggerDoc.Host = "ase-dev-api-demo.azurewebsites.net";
 #endif
             swaggerDoc.BasePath = "/";
             swaggerDoc.Schemes = new List<string>() { "https" };
